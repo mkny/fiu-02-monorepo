@@ -2,7 +2,10 @@ import React from 'react'
 
 function Button(props) {
   return (
-    <button {...props} />
+    <button style={{
+      padding: 10,
+      margin: 10
+    }} {...props} />
   )
 }
 
