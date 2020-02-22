@@ -7,6 +7,7 @@
     "packages/*"
   ],
   "scripts": {
+    "dev": "concurrently -k \"yarn components build -w\" \"yarn app1 start\" \"yarn app2 start\" \"yarn ws start\"",
     "app1": "yarn workspace @fiu/app-1",
     "app2": "yarn workspace @fiu/app-2",
     "components": "yarn workspace @fiu/components",
@@ -25,6 +26,7 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
+    "concurrently": "^5.1.0",
     "typescript": "~3.7.2"
   }
 }
